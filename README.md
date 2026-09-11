@@ -1,4 +1,4 @@
-# Campus Agent — Internship Opportunity Finder
+# Job Finding Agent — Internship Opportunity Finder
 
 Campus Agent is a full-stack web application designed for students and placement cells to find and match internship opportunities. It evaluates a student's profile (skills, interests, programme, year, CGPA) against a deterministic rule-based matching engine and displays a ranked shortlist of eligible internships with comprehensive reasons, alongside a list of excluded opportunities with reasons for disqualification.
 

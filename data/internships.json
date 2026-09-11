@@ -1,0 +1,337 @@
+[
+  {
+    "title": "ML Intern",
+    "organization": "TBD - Placement Cell",
+    "domain": "AI/ML",
+    "required_skills": [
+      "Python",
+      "Machine Learning"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "III",
+        "IV"
+      ],
+      "min_cgpa": 7.5
+    },
+    "duration": "8 weeks",
+    "deadline": "10 Sept",
+    "application_link": "https://www.google.com/search?q=ML+Intern+Campus+Placement",
+    "status": "Closed",
+    "start_date": "12 Sept",
+    "application_instructions": "Submit your resume to Placement Cell Coordinator in Room 102."
+  },
+  {
+    "title": "Web Developer Intern",
+    "organization": "TBD - Placement Cell",
+    "domain": "Web Development",
+    "required_skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "II",
+        "III"
+      ],
+      "min_cgpa": null
+    },
+    "duration": "12 weeks",
+    "deadline": "12 Sept",
+    "application_link": "https://www.google.com/search?q=Web+Developer+Intern+Campus+Placement",
+    "status": "Open",
+    "start_date": "01 Sept",
+    "application_instructions": "Apply via the hiring link or register at the Web Development cell."
+  },
+  {
+    "title": "Data Analytics Intern",
+    "organization": "TBD - Placement Cell",
+    "domain": "Data Science",
+    "required_skills": [
+      "Python",
+      "SQL"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "III",
+        "IV"
+      ],
+      "min_cgpa": 8.5
+    },
+    "duration": "8 weeks",
+    "deadline": "15 Sept",
+    "application_link": "https://www.google.com/search?q=Data+Analytics+Intern+Campus+Placement",
+    "status": "Open",
+    "start_date": "20 Sept",
+    "application_instructions": "Upload resume on the campus portal under Data Analytics drive."
+  },
+  {
+    "title": "Cloud Intern",
+    "organization": "TBD - Placement Cell",
+    "domain": "Cloud Computing",
+    "required_skills": [
+      "AWS",
+      "Linux"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "III",
+        "IV"
+      ],
+      "min_cgpa": null
+    },
+    "duration": "8 weeks",
+    "deadline": "18 Sept",
+    "application_link": "https://www.google.com/search?q=Cloud+Intern+Campus+Placement",
+    "status": "Open",
+    "start_date": "10 Sept",
+    "application_instructions": "Apply on the cloud tech application portal."
+  },
+  {
+    "title": "Python Developer Intern",
+    "organization": "PyCode Solutions",
+    "domain": "Web Development",
+    "required_skills": [
+      "Python",
+      "Git",
+      "SQL"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "II",
+        "III"
+      ],
+      "min_cgpa": 7.0
+    },
+    "duration": "8 weeks",
+    "deadline": "29 Sept",
+    "application_link": "https://pycode.com/careers/python-intern",
+    "status": "Open",
+    "start_date": "20 Sept",
+    "application_instructions": "Send Github link and resume to hr@pycode.com."
+  },
+  {
+    "title": "UI/UX Design Intern",
+    "organization": "CreativeFlow Labs",
+    "domain": "UI/UX Design",
+    "required_skills": [
+      "Figma",
+      "Adobe XD",
+      "Wireframing"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "II",
+        "III"
+      ],
+      "min_cgpa": null
+    },
+    "duration": "6 weeks",
+    "deadline": "19 Sept",
+    "application_link": "https://creativeflow.io/careers/uiux-intern",
+    "status": "Open",
+    "start_date": "18 Sept",
+    "application_instructions": "Upload Behance portfolio link on CreativeFlow Careers page."
+  },
+  {
+    "title": "Deep Learning Specialist Intern",
+    "organization": "NeuroCore AI Labs",
+    "domain": "AI/ML",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Deep Learning"
+    ],
+    "eligibility": {
+      "programme": "B.Tech CSE",
+      "years": [
+        "III",
+        "IV"
+      ],
+      "min_cgpa": 8.5
+    },
+    "duration": "6 Months",
+    "deadline": "20 Sept",
+    "application_link": "https://neurocore.ai/careers/intern",
+    "status": "Open",
+    "start_date": "22 Sept",
+    "application_instructions": "Apply directly on NeuroCore site; pass AI screening."
+  },
+  {
+    "title": "DevOps Engineer Intern",
+    "organization": "CloudScale Solutions",
+    "domain": "Cloud Computing",
+    "required_skills": [
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "AWS"
+    ],
+    "eligibility": {
+      "programme": "B.Tech CSE",
+      "years": [
+        "III",
+        "IV"
+      ],
+      "min_cgpa": 8.0
+    },
+    "duration": "6 Months",
+    "deadline": "25 Sept",
+    "application_link": "https://cloudscale.com/intern-devops",
+    "status": "Open",
+    "start_date": "25 Sept",
+    "application_instructions": "Register on the CloudScale portal using campus credentials."
+  },
+  {
+    "title": "iOS Developer Intern",
+    "organization": "AppPulse Media",
+    "domain": "Mobile Development",
+    "required_skills": [
+      "Swift",
+      "iOS",
+      "Xcode"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "II",
+        "III",
+        "IV"
+      ],
+      "min_cgpa": 7.2
+    },
+    "duration": "3 Months",
+    "deadline": "15 Sept",
+    "application_link": "https://apppulse.media/careers/ios-intern",
+    "status": "Open",
+    "start_date": "15 Sept",
+    "application_instructions": "Submit Xcode projects link to AppPulse placement coordinator."
+  },
+  {
+    "title": "Android Developer Intern",
+    "organization": "DroidCraft Inc",
+    "domain": "Mobile Development",
+    "required_skills": [
+      "Kotlin",
+      "Android Studio",
+      "Java"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "II",
+        "III",
+        "IV"
+      ],
+      "min_cgpa": 7.2
+    },
+    "duration": "3 Months",
+    "deadline": "17 Sept",
+    "application_link": "https://droidcraft.com/careers",
+    "status": "Open",
+    "start_date": "18 Sept",
+    "application_instructions": "Upload Kotlin project sample to DroidCraft portal."
+  },
+  {
+    "title": "Google Software Engineering Intern",
+    "organization": "Google",
+    "domain": "Software Engineering",
+    "required_skills": [
+      "Python",
+      "Go",
+      "Algorithms"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "III",
+        "IV"
+      ],
+      "min_cgpa": 8.0
+    },
+    "duration": "8 weeks",
+    "deadline": "30 Sept",
+    "application_link": "https://careers.google.com/jobs",
+    "status": "Open",
+    "start_date": "10 Oct",
+    "application_instructions": "Apply on Google Careers portal."
+  },
+  {
+    "title": "Microsoft Data Science Intern",
+    "organization": "Microsoft",
+    "domain": "Data Science",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "III"
+      ],
+      "min_cgpa": 8.0
+    },
+    "duration": "12 weeks",
+    "deadline": "28 Sept",
+    "application_link": "https://careers.microsoft.com",
+    "status": "Open",
+    "start_date": "15 Oct",
+    "application_instructions": "Submit CV via MS Careers portal."
+  },
+  {
+    "title": "Meta Frontend Engineer Intern",
+    "organization": "Meta",
+    "domain": "Web Development",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "CSS"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "II",
+        "III"
+      ],
+      "min_cgpa": null
+    },
+    "duration": "8 weeks",
+    "deadline": "05 Oct",
+    "application_link": "https://meta.com/careers",
+    "status": "Open",
+    "start_date": "20 Oct",
+    "application_instructions": "Register on Meta Careers portal."
+  },
+  {
+    "title": "Amazon Cloud Developer Intern",
+    "organization": "Amazon",
+    "domain": "Cloud Computing",
+    "required_skills": [
+      "AWS",
+      "Linux",
+      "Python"
+    ],
+    "eligibility": {
+      "programme": "B.Tech",
+      "years": [
+        "III",
+        "IV"
+      ],
+      "min_cgpa": 7.0
+    },
+    "duration": "8 weeks",
+    "deadline": "22 Sept",
+    "application_link": "https://amazon.jobs",
+    "status": "Open",
+    "start_date": "05 Oct",
+    "application_instructions": "Apply through Amazon Jobs."
+  }
+]

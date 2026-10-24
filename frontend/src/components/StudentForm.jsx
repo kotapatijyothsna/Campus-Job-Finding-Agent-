@@ -24,7 +24,7 @@ export default function StudentForm({ onSubmit, isLoading }) {
   const [year, setYear] = useState('III');
   const [cgpa, setCgpa] = useState('8.2');
   const [maxDurationWeeks, setMaxDurationWeeks] = useState('8');
-  const [preferredStartDate, setPreferredStartDate] = useState('15 Sept');
+  const [preferredStartDate, setPreferredStartDate] = useState('25 Oct');
   const [isParsing, setIsParsing] = useState(false);
 
   const handleResumeUpload = async (e) => {
@@ -64,7 +64,7 @@ export default function StudentForm({ onSubmit, isLoading }) {
         setYear('I');
         setCgpa('5.0');
         setMaxDurationWeeks('8');
-        setPreferredStartDate('15 Sept');
+        setPreferredStartDate('25 Oct');
         break;
       case 'case2': // ML Intern Closed
         setSkills('Python, Machine Learning, SQL, Figma');
@@ -73,7 +73,7 @@ export default function StudentForm({ onSubmit, isLoading }) {
         setYear('III');
         setCgpa('8.2');
         setMaxDurationWeeks('8');
-        setPreferredStartDate('15 Sept');
+        setPreferredStartDate('25 Oct');
         break;
       case 'case3': // CGPA Constraint Case
         setSkills('Python, Machine Learning, SQL, Figma');
@@ -82,7 +82,7 @@ export default function StudentForm({ onSubmit, isLoading }) {
         setYear('III');
         setCgpa('8.2'); // student has 8.2 (Data Analytics needs 8.5)
         setMaxDurationWeeks('8');
-        setPreferredStartDate('15 Sept');
+        setPreferredStartDate('25 Oct');
         break;
       case 'case4': // Duration Constraint Case
         setSkills('HTML, CSS, JavaScript, Python, SQL');
@@ -91,7 +91,7 @@ export default function StudentForm({ onSubmit, isLoading }) {
         setYear('III');
         setCgpa('8.2');
         setMaxDurationWeeks('12'); // starts with 12 (Web Dev Intern is 12 weeks and matches)
-        setPreferredStartDate('29 Aug');
+        setPreferredStartDate('01 Nov');
         break;
       case 'case5': // Start Date Case
         setSkills('Python, Machine Learning, SQL, Figma');
@@ -100,7 +100,7 @@ export default function StudentForm({ onSubmit, isLoading }) {
         setYear('III');
         setCgpa('8.2');
         setMaxDurationWeeks('8');
-        setPreferredStartDate('29 Aug'); // Available starting today (29 Aug)
+        setPreferredStartDate('25 Oct'); // Available starting today (25 Oct)
         break;
       default:
         break;
@@ -137,7 +137,7 @@ export default function StudentForm({ onSubmit, isLoading }) {
       year,
       cgpa: numCgpa,
       max_duration_weeks: parseInt(maxDurationWeeks) || 8,
-      preferred_start_date: preferredStartDate.trim() || '15 Sept'
+      preferred_start_date: preferredStartDate.trim() || '25 Oct'
     });
   };
 
@@ -148,7 +148,7 @@ export default function StudentForm({ onSubmit, isLoading }) {
     setYear('I');
     setCgpa('');
     setMaxDurationWeeks('8');
-    setPreferredStartDate('15 Sept');
+    setPreferredStartDate('25 Oct');
   };
 
   return (

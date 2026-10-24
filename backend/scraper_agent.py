@@ -2,6 +2,7 @@ import re
 import json
 import time
 import os
+import datetime
 import requests
 import urllib3
 from typing import List, Dict, Any, Optional
@@ -130,10 +131,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.0
         },
         "duration": "8 weeks",
-        "deadline": "30 Sept",
+        "deadline": "30 Nov",
         "application_link": "https://careers.google.com/jobs",
         "status": "Open",
-        "start_date": "10 Oct",
+        "start_date": "10 Dec",
         "application_instructions": "Apply on Google Careers portal."
     },
     {
@@ -147,10 +148,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 7.5
         },
         "duration": "8 weeks",
-        "deadline": "25 Sept",
+        "deadline": "25 Nov",
         "application_link": "https://careers.google.com/jobs",
         "status": "Open",
-        "start_date": "15 Oct",
+        "start_date": "15 Dec",
         "application_instructions": "Apply on Google Careers portal."
     },
     {
@@ -164,10 +165,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.0
         },
         "duration": "12 weeks",
-        "deadline": "28 Sept",
+        "deadline": "28 Nov",
         "application_link": "https://careers.microsoft.com",
         "status": "Open",
-        "start_date": "15 Oct",
+        "start_date": "15 Dec",
         "application_instructions": "Submit CV via MS Careers portal."
     },
     {
@@ -181,10 +182,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.0
         },
         "duration": "8 weeks",
-        "deadline": "20 Sept",
+        "deadline": "20 Nov",
         "application_link": "https://careers.microsoft.com",
         "status": "Open",
-        "start_date": "12 Oct",
+        "start_date": "12 Dec",
         "application_instructions": "Apply on MS Careers portal."
     },
     {
@@ -198,10 +199,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": None
         },
         "duration": "8 weeks",
-        "deadline": "05 Oct",
+        "deadline": "05 Nov",
         "application_link": "https://meta.com/careers",
         "status": "Open",
-        "start_date": "20 Oct",
+        "start_date": "20 Nov",
         "application_instructions": "Register on Meta Careers portal."
     },
     {
@@ -215,10 +216,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 7.5
         },
         "duration": "8 weeks",
-        "deadline": "01 Oct",
+        "deadline": "01 Nov",
         "application_link": "https://meta.com/careers",
         "status": "Open",
-        "start_date": "25 Oct",
+        "start_date": "25 Nov",
         "application_instructions": "Register on Meta Careers portal."
     },
     {
@@ -232,10 +233,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 7.0
         },
         "duration": "8 weeks",
-        "deadline": "22 Sept",
+        "deadline": "22 Nov",
         "application_link": "https://amazon.jobs",
         "status": "Open",
-        "start_date": "05 Oct",
+        "start_date": "05 Dec",
         "application_instructions": "Apply through Amazon Jobs."
     },
     {
@@ -249,10 +250,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 7.5
         },
         "duration": "8 weeks",
-        "deadline": "18 Sept",
+        "deadline": "18 Nov",
         "application_link": "https://amazon.jobs",
         "status": "Open",
-        "start_date": "08 Oct",
+        "start_date": "08 Dec",
         "application_instructions": "Apply through Amazon Jobs."
     },
     {
@@ -266,10 +267,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.0
         },
         "duration": "8 weeks",
-        "deadline": "12 Sept",
+        "deadline": "12 Nov",
         "application_link": "https://apple.com/careers",
         "status": "Open",
-        "start_date": "12 Oct",
+        "start_date": "12 Dec",
         "application_instructions": "Send application to ios-intern@apple.com."
     },
     {
@@ -283,10 +284,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": None
         },
         "duration": "6 weeks",
-        "deadline": "19 Sept",
+        "deadline": "19 Nov",
         "application_link": "https://jobs.netflix.com",
         "status": "Open",
-        "start_date": "18 Oct",
+        "start_date": "18 Dec",
         "application_instructions": "Submit portfolio on Netflix jobs site."
     },
     {
@@ -300,10 +301,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.0
         },
         "duration": "8 weeks",
-        "deadline": "25 Sept",
+        "deadline": "25 Nov",
         "application_link": "https://stripe.com/jobs",
         "status": "Open",
-        "start_date": "01 Oct",
+        "start_date": "01 Dec",
         "application_instructions": "Apply on Stripe Jobs board."
     },
     {
@@ -317,10 +318,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 7.5
         },
         "duration": "8 weeks",
-        "deadline": "29 Sept",
+        "deadline": "29 Nov",
         "application_link": "https://careers.uber.com",
         "status": "Open",
-        "start_date": "14 Oct",
+        "start_date": "14 Dec",
         "application_instructions": "Apply via Uber Careers page."
     },
     {
@@ -334,10 +335,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.5
         },
         "duration": "12 weeks",
-        "deadline": "10 Oct",
+        "deadline": "10 Nov",
         "application_link": "https://tesla.com/careers",
         "status": "Open",
-        "start_date": "20 Oct",
+        "start_date": "20 Nov",
         "application_instructions": "Submit Github profile on Tesla portal."
     },
     {
@@ -351,10 +352,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 7.5
         },
         "duration": "8 weeks",
-        "deadline": "15 Sept",
+        "deadline": "15 Nov",
         "application_link": "https://careers.airbnb.com",
         "status": "Open",
-        "start_date": "10 Oct",
+        "start_date": "10 Dec",
         "application_instructions": "Apply via Airbnb careers page."
     },
     {
@@ -368,10 +369,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.5
         },
         "duration": "12 weeks",
-        "deadline": "01 Oct",
+        "deadline": "01 Nov",
         "application_link": "https://nvidia.com/careers",
         "status": "Open",
-        "start_date": "01 Oct",
+        "start_date": "01 Dec",
         "application_instructions": "Apply on Nvidia careers portal."
     },
     {
@@ -385,10 +386,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 7.0
         },
         "duration": "8 weeks",
-        "deadline": "10 Oct",
+        "deadline": "10 Nov",
         "application_link": "https://oracle.com/careers",
         "status": "Open",
-        "start_date": "10 Oct",
+        "start_date": "10 Dec",
         "application_instructions": "Submit CV on Oracle jobs board."
     },
     {
@@ -402,10 +403,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.0
         },
         "duration": "8 weeks",
-        "deadline": "05 Oct",
+        "deadline": "05 Nov",
         "application_link": "https://adobe.com/careers",
         "status": "Open",
-        "start_date": "05 Oct",
+        "start_date": "05 Dec",
         "application_instructions": "Register on Adobe Careers portal."
     },
     {
@@ -419,10 +420,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 7.5
         },
         "duration": "8 weeks",
-        "deadline": "12 Oct",
+        "deadline": "12 Nov",
         "application_link": "https://salesforce.com/careers",
         "status": "Open",
-        "start_date": "12 Oct",
+        "start_date": "12 Dec",
         "application_instructions": "Apply through Salesforce student jobs."
     },
     {
@@ -436,10 +437,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 7.5
         },
         "duration": "12 weeks",
-        "deadline": "15 Oct",
+        "deadline": "15 Nov",
         "application_link": "https://intel.com/careers",
         "status": "Open",
-        "start_date": "15 Oct",
+        "start_date": "15 Dec",
         "application_instructions": "Send resume to intel-placements@intel.com."
     },
     {
@@ -453,10 +454,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.0
         },
         "duration": "8 weeks",
-        "deadline": "08 Oct",
+        "deadline": "08 Nov",
         "application_link": "https://spotify.com/careers",
         "status": "Open",
-        "start_date": "08 Oct",
+        "start_date": "08 Dec",
         "application_instructions": "Apply on Spotify jobs board."
     },
     {
@@ -470,10 +471,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.0
         },
         "duration": "8 weeks",
-        "deadline": "20 Oct",
+        "deadline": "20 Nov",
         "application_link": "https://x.com/careers",
         "status": "Open",
-        "start_date": "20 Oct",
+        "start_date": "20 Dec",
         "application_instructions": "Apply online at X Careers."
     },
     {
@@ -487,10 +488,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.0
         },
         "duration": "8 weeks",
-        "deadline": "10 Oct",
+        "deadline": "10 Nov",
         "application_link": "https://linkedin.com/careers",
         "status": "Open",
-        "start_date": "10 Oct",
+        "start_date": "10 Dec",
         "application_instructions": "Apply through LinkedIn Jobs portal."
     },
     {
@@ -504,10 +505,10 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 7.8
         },
         "duration": "8 weeks",
-        "deadline": "15 Oct",
+        "deadline": "15 Nov",
         "application_link": "https://zoom.us/careers",
         "status": "Open",
-        "start_date": "15 Oct",
+        "start_date": "15 Dec",
         "application_instructions": "Register at Zoom careers portal."
     },
     {
@@ -521,13 +522,42 @@ FALLBACK_SCRAPED = [
             "min_cgpa": 8.2
         },
         "duration": "12 weeks",
-        "deadline": "05 Oct",
+        "deadline": "05 Nov",
         "application_link": "https://coinbase.com/careers",
         "status": "Open",
-        "start_date": "05 Oct",
+        "start_date": "05 Dec",
         "application_instructions": "Apply on Coinbase jobs page."
     }
 ]
+
+def is_deadline_passed(deadline_str: str) -> bool:
+    """Return True if the deadline date is strictly before today's date."""
+    if not deadline_str:
+        return False
+    deadline_str = deadline_str.strip()
+    today = datetime.date.today()
+    month_abbrs = {
+        "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+        "jul": 7, "aug": 8, "sep": 9, "sept": 9, "oct": 10, "nov": 11, "dec": 12
+    }
+    dl_lower = deadline_str.lower()
+    day_match = re.search(r'(\d+)', dl_lower)
+    if not day_match:
+        return False
+    day = int(day_match.group(1))
+    month_num = 0
+    for abbr, num in month_abbrs.items():
+        if abbr in dl_lower:
+            month_num = num
+            break
+    if month_num == 0:
+        return False
+    try:
+        deadline_date = datetime.date(today.year, month_num, day)
+    except ValueError:
+        return False
+    return deadline_date < today
+
 
 def clean_html_to_text(html: str) -> str:
     html = re.sub(r'<(script|style).*?>.*?</\1>', '', html, flags=re.DOTALL | re.IGNORECASE)
@@ -769,6 +799,12 @@ def run_multi_agent_scrape(
         
         if extracted_items:
             for item in extracted_items:
+                # Skip if deadline has already passed
+                item_deadline = item.get("deadline", "")
+                if item_deadline and is_deadline_passed(item_deadline):
+                    logs.append(f"[Validator Agent] ⏰ Skipping '{item.get('title')}' — deadline already passed ({item_deadline}).")
+                    continue
+
                 req_skills = item.get("required_skills", [])
                 matched = [s for s in req_skills if s.lower().strip() in student_skills_lower]
                 preferred = [s for s in req_skills if s.lower().strip() not in student_skills_lower]
@@ -898,14 +934,20 @@ def run_multi_agent_scrape(
                                 "min_cgpa": 7.5
                             },
                             "duration": "8 weeks",
-                            "deadline": "30 Sept",
+                            "deadline": "30 Nov",
                             "application_link": f"https://{company.lower()}.com/careers",
                             "status": "Open",
-                            "start_date": "10 Oct",
+                            "start_date": "10 Dec",
                             "application_instructions": f"Apply on {company} jobs site."
                         }]
                         
             for item in extracted_items:
+                # Skip if deadline has already passed
+                item_deadline = item.get("deadline", "")
+                if item_deadline and is_deadline_passed(item_deadline):
+                    logs.append(f"[Validator Agent] ⏰ Skipping '{item.get('title')}' — deadline already passed ({item_deadline}).")
+                    continue
+
                 logs.append(f"[Validator Agent] ⚡ Checking skills alignment with student profile for: {item.get('title')}...")
                 
                 req_skills = item.get("required_skills", [])

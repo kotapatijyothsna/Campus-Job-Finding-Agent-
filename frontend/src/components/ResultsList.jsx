@@ -395,7 +395,7 @@ export default function ResultsList({ results, onTrackOpportunity }) {
                   {top_recommendation.application_link ? (
                     <>Click the <strong>Apply Online</strong> link below to submit your application on the portal.</>
                   ) : (
-                    <>Submit your updated resume to the Placement Cell coordinator before the deadline on <strong>{top_recommendation.deadline}</strong>.</>
+                    <>Visit your <strong>TNP / Placement Cell</strong> office and submit your resume before <strong>{top_recommendation.deadline}</strong>. Check the instructions below for details.</>
                   )}
                 </span>
               </div>
@@ -545,9 +545,14 @@ export default function ResultsList({ results, onTrackOpportunity }) {
                 Apply Online <ExternalLink size={14} />
               </a>
             ) : (
-              <button disabled className="btn btn-apply-disabled" style={{ width: 'auto' }}>
-                Contact Placement Cell
-              </button>
+              <span style={{
+                display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+                background: 'rgba(16, 185, 129, 0.15)', border: '1px solid rgba(16, 185, 129, 0.4)',
+                color: '#34d399', borderRadius: '20px', padding: '0.35rem 0.9rem',
+                fontSize: '0.82rem', fontWeight: 700
+              }}>
+                🏫 Apply via TNP Cell
+              </span>
             )}
           </div>
         </div>
@@ -692,9 +697,14 @@ export default function ResultsList({ results, onTrackOpportunity }) {
                       Apply <ExternalLink size={12} />
                     </a>
                   ) : (
-                    <button disabled className="btn btn-apply-disabled-sm">
-                      Contact Cell
-                    </button>
+                    <span style={{
+                      display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
+                      background: 'rgba(16, 185, 129, 0.12)', border: '1px solid rgba(16, 185, 129, 0.35)',
+                      color: '#34d399', borderRadius: '20px', padding: '0.25rem 0.7rem',
+                      fontSize: '0.74rem', fontWeight: 700, whiteSpace: 'nowrap'
+                    }}>
+                      🏫 TNP Cell
+                    </span>
                   )}
                 </div>
               </div>

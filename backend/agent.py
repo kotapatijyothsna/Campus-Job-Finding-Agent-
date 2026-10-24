@@ -1,4 +1,5 @@
 import re
+import datetime
 from typing import List, Dict, Any, Tuple
 from models import (
     StudentProfile,
@@ -53,6 +54,44 @@ def date_to_days(date_str: str) -> int:
         
     return month_idx * 31 + day
 
+
+def is_deadline_passed(deadline_str: str) -> bool:
+    """Return True if the deadline date is strictly before today's date."""
+    if not deadline_str:
+        return False
+
+    deadline_str = deadline_str.strip()
+    today = datetime.date.today()
+    current_year = today.year
+
+    # Try to parse the deadline with the current year first, then next year
+    month_abbrs = {
+        "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+        "jul": 7, "aug": 8, "sep": 9, "sept": 9, "oct": 10, "nov": 11, "dec": 12
+    }
+
+    dl_lower = deadline_str.lower()
+    day_match = re.search(r'(\d+)', dl_lower)
+    if not day_match:
+        return False
+    day = int(day_match.group(1))
+
+    month_num = 0
+    for abbr, num in month_abbrs.items():
+        if abbr in dl_lower:
+            month_num = num
+            break
+
+    if month_num == 0:
+        return False
+
+    try:
+        deadline_date = datetime.date(current_year, month_num, day)
+    except ValueError:
+        return False
+
+    return deadline_date < today
+
 def get_recommendations(student: StudentProfile, internships: List[InternshipOpportunity]) -> RecommendationResponse:
     eligible_list: List[Tuple[InternshipOpportunity, int, Dict[str, Any]]] = []
     not_eligible_list: List[NotEligibleRecommendation] = []
@@ -72,6 +111,10 @@ def get_recommendations(student: StudentProfile, internships: List[InternshipOpp
 
     for item in internships:
         reasons_ineligible = []
+
+        # 0. Deadline passed check — skip if deadline is in the past
+        if item.deadline and is_deadline_passed(item.deadline):
+            reasons_ineligible.append(f"Deadline already passed ({item.deadline})")
 
         # 1. Availability check (Change 1)
         if item.status and item.status.lower() in ("closed", "applications closed"):
@@ -209,6 +252,16 @@ def get_recommendations(student: StudentProfile, internships: List[InternshipOpp
 
     ranked_recommendations: List[RankedRecommendation] = []
     for rank_idx, (item, score, details) in enumerate(eligible_list, start=1):
+        # Detect TNP / Placement Cell internships — no external link applies
+        org_lower = (item.organization or "").lower()
+        is_tnp = any(kw in org_lower for kw in ["placement cell", "tnp cell", "tnp", "training and placement", "career cell"])
+        # Also detect if the link is a placeholder Google search (not a real portal)
+        link = item.application_link or ""
+        if is_tnp or "google.com/search" in link:
+            resolved_link = None   # hide fake/search links for TNP roles
+        else:
+            resolved_link = link or None
+
         ranked_recommendations.append(RankedRecommendation(
             rank=rank_idx,
             title=item.title,
@@ -220,7 +273,7 @@ def get_recommendations(student: StudentProfile, internships: List[InternshipOpp
             eligibility_status="Eligible",
             reason=details["reason"],
             deadline=item.deadline,
-            application_link=item.application_link,
+            application_link=resolved_link,
             duration=item.duration,
             start_date=item.start_date,
             status=item.status or "Open",

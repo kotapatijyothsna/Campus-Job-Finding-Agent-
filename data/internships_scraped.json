@@ -1,0 +1,29 @@
+{
+  "title": "AI/ML Intern",
+  "organization": "Example Company",
+  "company_tier": "Startup",
+  "domain": "Artificial Intelligence",
+  "required_skills": [
+    "Python",
+    "Machine Learning",
+    "TensorFlow",
+    "PyTorch"
+  ],
+  "eligibility": {
+    "programme": "B.Tech/B.E. or related degree",
+    "years": ["III", "IV"],
+    "min_cgpa": null,
+    "graduation_year": 2027
+  },
+  "duration": "6 Months",
+  "deadline": "2026-12-31",
+  "deadline_status": "Published deadline",
+  "application_link": "...",
+  "status": "Open",
+  "start_date": null,
+  "location": ["Bengaluru, Karnataka, India"],
+  "work_mode": "Hybrid",
+  "application_instructions": "Apply through the official company application page.",
+  "source": "Official company careers page",
+  "verified_date": "2026-10-24"
+}

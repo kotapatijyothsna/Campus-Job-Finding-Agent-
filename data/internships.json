@@ -16,10 +16,10 @@
       "min_cgpa": 7.5
     },
     "duration": "8 weeks",
-    "deadline": "10 Sept",
+    "deadline": "10 Nov",
     "application_link": "https://www.google.com/search?q=ML+Intern+Campus+Placement",
-    "status": "Closed",
-    "start_date": "12 Sept",
+    "status": "Open",
+    "start_date": "12 Nov",
     "application_instructions": "Submit your resume to Placement Cell Coordinator in Room 102."
   },
   {
@@ -40,10 +40,10 @@
       "min_cgpa": null
     },
     "duration": "12 weeks",
-    "deadline": "12 Sept",
+    "deadline": "12 Nov",
     "application_link": "https://www.google.com/search?q=Web+Developer+Intern+Campus+Placement",
     "status": "Open",
-    "start_date": "01 Sept",
+    "start_date": "01 Dec",
     "application_instructions": "Apply via the hiring link or register at the Web Development cell."
   },
   {
@@ -63,10 +63,10 @@
       "min_cgpa": 8.5
     },
     "duration": "8 weeks",
-    "deadline": "15 Sept",
+    "deadline": "15 Nov",
     "application_link": "https://www.google.com/search?q=Data+Analytics+Intern+Campus+Placement",
     "status": "Open",
-    "start_date": "20 Sept",
+    "start_date": "20 Nov",
     "application_instructions": "Upload resume on the campus portal under Data Analytics drive."
   },
   {
@@ -86,10 +86,10 @@
       "min_cgpa": null
     },
     "duration": "8 weeks",
-    "deadline": "18 Sept",
+    "deadline": "18 Nov",
     "application_link": "https://www.google.com/search?q=Cloud+Intern+Campus+Placement",
     "status": "Open",
-    "start_date": "10 Sept",
+    "start_date": "25 Nov",
     "application_instructions": "Apply on the cloud tech application portal."
   },
   {
@@ -110,10 +110,10 @@
       "min_cgpa": 7.0
     },
     "duration": "8 weeks",
-    "deadline": "29 Sept",
+    "deadline": "29 Nov",
     "application_link": "https://pycode.com/careers/python-intern",
     "status": "Open",
-    "start_date": "20 Sept",
+    "start_date": "10 Dec",
     "application_instructions": "Send Github link and resume to hr@pycode.com."
   },
   {
@@ -134,10 +134,10 @@
       "min_cgpa": null
     },
     "duration": "6 weeks",
-    "deadline": "19 Sept",
+    "deadline": "19 Nov",
     "application_link": "https://creativeflow.io/careers/uiux-intern",
     "status": "Open",
-    "start_date": "18 Sept",
+    "start_date": "01 Dec",
     "application_instructions": "Upload Behance portfolio link on CreativeFlow Careers page."
   },
   {
@@ -158,10 +158,10 @@
       "min_cgpa": 8.5
     },
     "duration": "6 Months",
-    "deadline": "20 Sept",
+    "deadline": "20 Nov",
     "application_link": "https://neurocore.ai/careers/intern",
     "status": "Open",
-    "start_date": "22 Sept",
+    "start_date": "01 Dec",
     "application_instructions": "Apply directly on NeuroCore site; pass AI screening."
   },
   {
@@ -183,10 +183,10 @@
       "min_cgpa": 8.0
     },
     "duration": "6 Months",
-    "deadline": "25 Sept",
+    "deadline": "25 Nov",
     "application_link": "https://cloudscale.com/intern-devops",
     "status": "Open",
-    "start_date": "25 Sept",
+    "start_date": "05 Dec",
     "application_instructions": "Register on the CloudScale portal using campus credentials."
   },
   {
@@ -208,10 +208,10 @@
       "min_cgpa": 7.2
     },
     "duration": "3 Months",
-    "deadline": "15 Sept",
+    "deadline": "15 Nov",
     "application_link": "https://apppulse.media/careers/ios-intern",
     "status": "Open",
-    "start_date": "15 Sept",
+    "start_date": "01 Dec",
     "application_instructions": "Submit Xcode projects link to AppPulse placement coordinator."
   },
   {
@@ -233,10 +233,10 @@
       "min_cgpa": 7.2
     },
     "duration": "3 Months",
-    "deadline": "17 Sept",
+    "deadline": "17 Nov",
     "application_link": "https://droidcraft.com/careers",
     "status": "Open",
-    "start_date": "18 Sept",
+    "start_date": "01 Dec",
     "application_instructions": "Upload Kotlin project sample to DroidCraft portal."
   },
   {
@@ -257,10 +257,10 @@
       "min_cgpa": 8.0
     },
     "duration": "8 weeks",
-    "deadline": "30 Sept",
+    "deadline": "30 Nov",
     "application_link": "https://careers.google.com/jobs",
     "status": "Open",
-    "start_date": "10 Oct",
+    "start_date": "10 Dec",
     "application_instructions": "Apply on Google Careers portal."
   },
   {
@@ -280,10 +280,10 @@
       "min_cgpa": 8.0
     },
     "duration": "12 weeks",
-    "deadline": "28 Sept",
+    "deadline": "28 Nov",
     "application_link": "https://careers.microsoft.com",
     "status": "Open",
-    "start_date": "15 Oct",
+    "start_date": "15 Dec",
     "application_instructions": "Submit CV via MS Careers portal."
   },
   {
@@ -304,10 +304,10 @@
       "min_cgpa": null
     },
     "duration": "8 weeks",
-    "deadline": "05 Oct",
+    "deadline": "05 Nov",
     "application_link": "https://meta.com/careers",
     "status": "Open",
-    "start_date": "20 Oct",
+    "start_date": "20 Nov",
     "application_instructions": "Register on Meta Careers portal."
   },
   {
@@ -328,10 +328,10 @@
       "min_cgpa": 7.0
     },
     "duration": "8 weeks",
-    "deadline": "22 Sept",
+    "deadline": "22 Nov",
     "application_link": "https://amazon.jobs",
     "status": "Open",
-    "start_date": "05 Oct",
+    "start_date": "05 Dec",
     "application_instructions": "Apply through Amazon Jobs."
   }
 ]

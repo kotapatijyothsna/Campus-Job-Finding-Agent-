@@ -26,6 +26,8 @@ export default function StudentForm({ onSubmit, isLoading }) {
   const [maxDurationWeeks, setMaxDurationWeeks] = useState('8');
   const [preferredStartDate, setPreferredStartDate] = useState('25 Oct');
   const [isParsing, setIsParsing] = useState(false);
+  const [parseResult, setParseResult] = useState(null); // { filled: [...], missing: [...] }
+  const fileInputRef = React.useRef(null);
 
   const handleResumeUpload = async (e) => {
     const file = e.target.files[0];
@@ -37,21 +39,60 @@ export default function StudentForm({ onSubmit, isLoading }) {
     }
 
     setIsParsing(true);
+    setParseResult(null);
     try {
       const result = await parseResume(file);
-      if (result && result.skills) {
-        if (result.skills.length > 0) {
-          setSkills(result.skills.join(', '));
-          alert(`Extracted ${result.skills.length} skills from your resume!`);
-        } else {
-          alert('Successfully parsed resume, but no known skills were found. Please list them manually.');
-        }
+      const filled = [];
+      const missing = [];
+
+      // Skills
+      if (result.skills && result.skills.length > 0) {
+        setSkills(result.skills.join(', '));
+        filled.push(`${result.skills.length} skill${result.skills.length > 1 ? 's' : ''}`);
+      } else {
+        missing.push('Skills');
       }
+
+      // Interests
+      if (result.interests && result.interests.length > 0) {
+        setInterests(result.interests.join(', '));
+        filled.push(`${result.interests.length} interest${result.interests.length > 1 ? 's' : ''}`);
+      } else {
+        missing.push('Interests');
+      }
+
+      // Programme
+      if (result.programme) {
+        setProgramme(result.programme);
+        filled.push('Programme');
+      } else {
+        missing.push('Programme');
+      }
+
+      // Year
+      if (result.year) {
+        setYear(result.year);
+        filled.push('Year');
+      } else {
+        missing.push('Year');
+      }
+
+      // CGPA
+      if (result.cgpa !== null && result.cgpa !== undefined) {
+        setCgpa(String(result.cgpa));
+        filled.push('CGPA');
+      } else {
+        missing.push('CGPA');
+      }
+
+      setParseResult({ filled, missing });
     } catch (err) {
       console.error(err);
-      alert(`Error parsing resume: ${err.message}`);
+      setParseResult({ error: err.message });
     } finally {
       setIsParsing(false);
+      // Reset file input so the same file can be re-uploaded
+      if (fileInputRef.current) fileInputRef.current.value = '';
     }
   };
 
@@ -194,7 +235,8 @@ export default function StudentForm({ onSubmit, isLoading }) {
         </label>
         <input 
           type="file" 
-          id="resume-upload" 
+          id="resume-upload"
+          ref={fileInputRef}
           accept=".pdf" 
           onChange={handleResumeUpload} 
           disabled={isParsing}
@@ -207,7 +249,7 @@ export default function StudentForm({ onSubmit, isLoading }) {
           {isParsing ? (
             <div className="parsing-status">
               <Loader2 size={18} className="spinner" style={{ width: '18px', height: '18px' }} />
-              <span>Scanning resume keywords...</span>
+              <span>Scanning resume — extracting skills, interests, CGPA...</span>
             </div>
           ) : (
             <span className="upload-hint">
@@ -215,6 +257,28 @@ export default function StudentForm({ onSubmit, isLoading }) {
             </span>
           )}
         </div>
+
+        {/* Inline parse result banner */}
+        {parseResult && !isParsing && (
+          parseResult.error ? (
+            <div className="parse-banner parse-banner-error">
+              ⚠️ <strong>Parse failed:</strong> {parseResult.error}
+            </div>
+          ) : (
+            <div className={`parse-banner ${
+              parseResult.missing.length === 0 ? 'parse-banner-success' : 'parse-banner-partial'
+            }`}>
+              {parseResult.missing.length === 0 ? (
+                <><CheckCircle size={14} style={{ display:'inline', marginRight:'5px' }} />
+                <strong>Resume fully parsed!</strong> Auto-filled: {parseResult.filled.join(', ')}.</>
+              ) : (
+                <><CheckCircle size={14} style={{ display:'inline', marginRight:'5px' }} />
+                <strong>Partially parsed.</strong> Auto-filled: {parseResult.filled.join(', ')}.
+                {' '}<span style={{ opacity: 0.75 }}>Please fill manually: {parseResult.missing.join(', ')}.</span></>
+              )}
+            </div>
+          )
+        )}
       </div>
       
       <div className="form-group">

@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://127.0.0.1:8001/api';
+const API_BASE_URL = 'http://127.0.0.1:8000/api';
 
 export async function getRecommendations(studentProfile) {
   const response = await fetch(`${API_BASE_URL}/recommend`, {
@@ -21,10 +21,15 @@ export async function parseResume(file) {
   const formData = new FormData();
   formData.append('file', file);
 
-  const response = await fetch(`${API_BASE_URL}/parse-resume`, {
-    method: 'POST',
-    body: formData,
-  });
+  let response;
+  try {
+    response = await fetch(`${API_BASE_URL}/parse-resume`, {
+      method: 'POST',
+      body: formData,
+    });
+  } catch (networkErr) {
+    throw new Error('Cannot reach the backend server. Make sure it is running on port 8001.');
+  }
 
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));

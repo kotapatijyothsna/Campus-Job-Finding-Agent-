@@ -775,6 +775,42 @@ body {
   gap: 0.5rem;
 }
 
+/* Resume parse result banner */
+.parse-banner {
+  margin-top: 0.6rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  animation: fadeInDown 0.3s ease;
+}
+
+.parse-banner-success {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #6ee7b7;
+}
+
+.parse-banner-partial {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fcd34d;
+}
+
+.parse-banner-error {
+  background: rgba(244, 63, 94, 0.1);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  color: #fda4af;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* Inputs & Form Fields */
 .form-group {
   margin-bottom: 1.35rem;
